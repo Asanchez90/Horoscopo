@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./practica-flex.css">
+    <link rel="shortcut icon"
+        href="data:image/jpeg;base64,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"
+        type="image/x-icon">
+    <title>Practica flex</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="main-nav">
+            <h1><a href="./Practica-flex.html" target="_blank" rel="noopener">HOROSCOPOS</a></h1>
+            <ul class="ul-list-nav" id="js-navbar-toggle">
+                <li><a href="https://carta-natal.es/carta.php" target="_blank" rel="noopener">Crea tu carta natal</a>
+                </li>
+                <li><a href="https://micartadisenohumano.com/diseno-humano-carta/" target="_blank" rel="noopener">Diseño
+                        humano</a></li>
+                <li><a href="https://www.clarin.com/astrologia/calcular-arcano-nacimiento-tarot_0_RBM4Rsoy5.html"
+                        target="_blank" rel="noopener">Tu arcano mayor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- todos los horoscopos cartas -->
+    <section class="Horoscopes-card">
+
+
+        <!-- Aries -->
+        <article class="prew-card" class="Aries">
+
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>21 de marzo - 19 de abril</p>
+                    </article>
+
+                    <button><a href="#Aries-info">Más información</a></button>
+
+                </div>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072019/Horoscopos/Aries_pepiqt.png" />
+            </article>
+
+
+        </article>
+        <!-- Tauro -->
+        <article class="prew-card" class="Tauro">
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>20 de abril - 20 de mayo</p>
+                    </article>
+
+                    <button><a href="#Tauro-info">Más información</a></button>
+
+                </div>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Tauro_wzkr3w.png" />
+            </article>
+        </article>
+        <!-- Géminis -->
+        <article class="prew-card" class="Geminis">
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>21 de mayo - 20 de junio</p>
+                    </article>
+
+                    <button><a href="#Geminis-info">Más información</a></button>
+
+                </div>
+                <img
+                    src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Geminis_jgovdv.png" />
+            </article>
+        </article>
+        <!-- Cáncer -->
+        <article class="prew-card" class="Cancer">
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>21 de junio - 22 de julio</p>
+                    </article>
+
+                    <button><a href="#Cancer-info">Más información</a></button>
+
+                </div>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Cancer_q64z1l.png" />
+            </article>
+        </article>
+        <!-- Leo -->
+        <article class="prew-card" class="Leo">
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>23 de julio - 22 de agosto</p>
+                    </article>
+
+                    <button><a href="#Leo-info">Más información</a></button>
+
+                </div>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Leo_qh9tgy.png" />
+            </article>
+        </article>
+        <!-- Virgo -->
+        <article class="prew-card" class="Virgo">
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>23 de agosto - 22 de septiembre</p>
+                    </article>
+
+                    <button><a href="#Virgo-info">Más información</a></button>
+
+                </div>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072021/Horoscopos/Virgo_qkcx7e.png" />
+            </article>
+        </article>
+        <!-- Libra -->
+        <article class="prew-card" class="Libra">
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>23 de septiembre - 22 de octubre</p>
+                    </article>
+
+                    <button><a href="#Libra-info">Más información</a></button>
+
+                </div>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Libra_emrntx.png" />
+            </article>
+        </article>
+        <!-- Escorpio -->
+        <article class="prew-card" class="Escorpio">
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>23 de octubre - 21 de noviembre</p>
+                    </article>
+
+                    <button><a href="#Escorpio-info">Más información</a></button>
+
+                </div>
+                <img
+                    src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Escorpio_mcnoec.png" />
+            </article>
+        </article>
+        <!-- Sagitario -->
+        <article class="prew-card" class="Sagitario">
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>22 de noviembre - 21 de diciembre</p>
+                    </article>
+
+                    <button><a href="#Sagitario-info">Más información</a></button>
+
+                </div>
+                <img
+                    src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Sagitario_zmeexo.png" />
+            </article>
+        </article>
+        <!-- Capricornio -->
+        <article class="prew-card" class="Capricornio">
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>22 de diciembre - 19 de enero</p>
+                    </article>
+
+                    <button><a href="#Capricornio-info">Más información</a></button>
+
+                </div>
+                <img
+                    src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Capricornio_moqkuq.png" />
+            </article>
+        </article>
+        <!-- Acuario -->
+        <article class="prew-card" class="Acuario">
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>20 de enero - 18 de febrero</p>
+                    </article>
+
+                    <button><a href="#Acuario-info">Más información</a></button>
+
+                </div>
+                <img
+                    src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Acuario_sanaeg.png" />
+            </article>
+        </article>
+        <!-- Piscis -->
+        <article class="prew-card" class="Piscis">
+            <article class="prew-card-front" title=carta.nombre>
+                <div class="telon">
+                    <article>
+                        <p>Fechas de nacimiento:</p>
+                        <p>19 de febrero - 20 de marzo</p>
+                    </article>
+
+                    <button><a href="#Piscis-info">Más información</a></button>
+
+                </div>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Piscis_x9f5m6.png" />
+            </article>
+        </article>
+
+    </section>
+
+    <!-- Informacion Horoscopos -->
+    <section class="Horoscopes-card-info">
+        <!-- Aries -->
+        <article class="carta" id="Aries-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072019/Horoscopos/Aries_pepiqt.png"
+                    alt="Aries" />
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Marte</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>21 de marzo - 19 de abril</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>Tierra</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>Rebosante de energía y entusiasmo; avanzada y aventurera, adora la libertad, los retos
+                        y las nuevas ideas. </p>
+                </li>
+            </ul>
+        </article>
+        <!-- Tauro -->
+        <article class="carta" id="Tauro-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Tauro_wzkr3w.png"
+                    alt="Tauro" />
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Venus</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>20 de abril - 20 de mayo</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>fuego</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>práctico, decidido y tener una gran fuerza de voluntad. Son personas estables y
+                        conservadores,
+                        seguirán de forma leal un líder en el que tienen confianza. Les encanta la paz y tranquilidad y
+                        son muy respetuosos con las leyes y las reglas. Respetan los valores materiales y evitan las
+                        deudas. </p>
+                </li>
+            </ul>
+        </article>
+        <!-- Geminis -->
+        <article class="carta" id="Geminis-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Geminis_jgovdv.png"
+                    alt="Gemenis" />
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Mercurio</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>21 de mayo - 20 de junio</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>Aire</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>intelectual, curioso y muy activo. A las personas nacidas bajo este signo, les encantan
+                        los juegos de palabras y actividades complejas que les hagan reflexionar, crecer como personas y
+                        continuar avanzando. Son amables, generosos y muy cariñosos.</p>
+                </li>
+            </ul>
+        </article>
+        <!-- Cancer -->
+        <article class="carta" id="Cancer-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Cancer_q64z1l.png"
+                    alt="Cancer" />
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Luna</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>21 de junio - 22 de julio</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>Agua</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>Son muy emocionales y sensibles, y se preocupan profundamente por los asuntos de la
+                        familia y del hogar. El cáncer es comprensivo y se apega a las personas que mantienen cerca. Al
+                        ser un signo de agua regido por la Luna, son personas con un carácter y comportamiento un tanto
+                        discorde con cambios de ánimos rápidos.</p>
+                </li>
+            </ul>
+        </article>
+        <!-- Leo -->
+        <article class="carta" id="Leo-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Leo_qh9tgy.png"
+                    alt="Leo" />
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Sol</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>23 de julio - 22 de agosto</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>Fuego</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>son entusiastas, creativos y muchas veces comprensivos con las circunstancias de los
+                        demás; adoran los lujos y la aventura; correr riesgos les motiva. También se caracterizan por
+                        tener un elevado concepto de todo, especialmente, de sí mismos, por eso huyen de la vulgaridad.
+                    </p>
+                </li>
+            </ul>
+        </article>
+        <!-- Virgo -->
+        <article class="carta" id="Virgo-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072021/Horoscopos/Virgo_qkcx7e.png"
+                    alt="Virgo" />
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Mercurio</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>23 de agosto - 22 de septiembre</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>Tierra</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>son el perfeccionismo, la ironía y la atención a los detalles. Las personas de este
+                        signo son muy críticas y satíricas con todo lo que les rodea, y tienen una gran capacidad
+                        analítica, que hace aún más potente su deseo de alcanzar la perfección.</p>
+                </li>
+            </ul>
+        </article>
+        <!-- Libra -->
+        <article class="carta" id="Libra-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Libra_emrntx.png"
+                    alt="Libra" />
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Venus</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>23 de septiembre - 22 de octubre</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>Aire</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>Tiene elegancia, encanto, diplomacia y buen gusto, ama la belleza, es muy curioso por
+                        naturaleza y odia los conflictos. Sus puntos negativos a veces son la frivolidad y un carácter
+                        voluble.</p>
+                </li>
+            </ul>
+        </article>
+        <!-- Escorpio -->
+        <article class="carta" id="Escorpio-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Escorpio_mcnoec.png"
+                    alt="Escorpio" />
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Plutón y Marte</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>23 de octubre - 21 de noviembre</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>Agua estancá</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>Escorpio es un signo fijo, su potencia y energía emocional son únicas en todo
+                        el zodíaco. Tiene mucha imaginación e intuición, además de una gran capacidad para el análisis,
+                        fuerza de voluntad y firmeza, aunque también es muy sensible y emocional consigo mismo y con el
+                        entorno.</p>
+                </li>
+            </ul>
+        </article>
+        <!-- Sagitario -->
+        <article class="carta" id="Sagitario-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Sagitario_zmeexo.png"
+                    alt="Sagitario" />
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Júpiter</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>22 de noviembre - 21 de diciembre</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>Fuego</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>Son intuitivos, buenos organizadores y muy generosos. Entre los pilares ideológicos de
+                        Sagitario se encuentra la libertad y la justicia por encima de todo y son personas muy fieles a
+                        sus creencias, sean las que sean.</p>
+                </li>
+            </ul>
+        </article>
+        <!-- Capricornio -->
+        <article class="carta" id="Capricornio-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Capricornio_moqkuq.png"
+                    alt="Capricornio" />
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Saturno</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>22 de diciembre - 19 de enero</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>Tierra</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>Es un signo cardinal y de tierra, y uno de los signos del zodíaco más constante, sólido
+                        y apacible. También se caracteriza por ser prudente y práctico en todos los asuntos que le
+                        conciernen. Sus aspectos más negativos tienden hacia el pesimismo, la fijeza y la melancolía.
+                    </p>
+                </li>
+            </ul>
+        </article>
+        <!-- Acuario -->
+        <article class="carta" id="Acuario-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Acuario_sanaeg.png"
+                    alt="Acuario" />
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Urano y Saturno</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>20 de enero - 18 de febrero</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>Aire</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>Simpático, original y brillante, Acuario también es un signo muy humanitario, al mismo
+                        tiempo que independiente e intelectual. Sus puntos negativos se encuentran en su inestabilidad e
+                        imprecisión y en su tendencia a llevar la contraria casi por sistema.</p>
+                </li>
+            </ul>
+        </article>
+        <!-- Piscis -->
+        <article class="carta" id="Piscis-info">
+            <article>
+                <img src="https://res.cloudinary.com/dcs7ntcz7/image/upload/v1694072020/Horoscopos/Piscis_x9f5m6.png"
+                    alt="Piscis" />
+
+            </article>
+            <ul class="info-text-card">
+                <li>
+                    <h4>Planeta</h4>
+                </li>
+                <li>
+                    <p class='p'>Mercurio</p>
+                </li>
+                <li>
+                    <h4>Fechas de nacimiento </h4>
+                </li>
+                <li>
+                    <p class='p'>19 de febrero - 20 de marzo</p>
+                </li>
+                <li>
+                    <h4>Elemento </h4>
+                </li>
+                <li>
+                    <p class='p'>Agua</p>
+                </li>
+                <li>
+                    <h4>¿Como son?</h4>
+                </li>
+                <li>
+                    <p class='p'>Son soñadores y creativos, poseedores de una imaginación rica y una intuición poderosa.
+                        Este signo tiende a absorber las emociones de quienes los rodean, lo que los hace altamente
+                        perceptivos y comprensivos. Son seres amables y altruistas que sienten un fuerte llamado a
+                        ayudar a los demás y a aliviar el sufrimiento.</p>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <footer class="footer">
+        <h2>Diseñado por <span>Alejandro Sánchez</span> para <span>Rock{TheCode}</span></h2>
+    </footer>
+
+
+</body>
+
+
+</html>
