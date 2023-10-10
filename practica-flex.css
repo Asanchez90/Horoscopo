@@ -185,7 +185,7 @@ body {
   border-bottom: 1px solid var(--rc-color-n-000);
   align-items: center;
   flex-grow: 1;
-  /* view-timeline-name: --revealing-image; */
+  view-timeline-name: --revealing-image;
   animation-name: show;
   animation-fill-mode: both;
   animation-timeline: --revealing-image;
