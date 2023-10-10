@@ -168,6 +168,13 @@ body {
 }
 
 /* ------------------------------- */
+.info-titulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--rc-typography-h1*2);
+  color: var(--rc-color-n-000);
+}
 /* carta section info*/
 .Horoscopes-card {
   display: flex;
