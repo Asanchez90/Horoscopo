@@ -100,7 +100,6 @@ body {
   color: var(--rc-color-n-000);
   text-decoration: none;
   font-size: var(--rc-typography-h3);
-  
 }
 
 /* estilo cartas prew */
@@ -168,11 +167,11 @@ body {
 }
 
 /* ------------------------------- */
-.info-titulo{
+.info-titulo {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: var(--rc-typography-h1*2);
+  font-size: var(--rc-typography-h1 * 2);
   color: var(--rc-color-n-000);
 }
 /* carta section info*/
@@ -253,22 +252,46 @@ button > a {
   color: var(--rc-color-n-500);
 }
 
-
 /* --------------------------------------------------- */
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
   /* nav */
   * {
     margin: 0;
     padding: 0;
   }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .main-nav {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .ul-list-nav {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  /* .header,
   .main-nav,
   .ul-list-nav {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-  }
+  } */
 
   /* cartas horoscopos prew */
   .Horoscopes-card {
@@ -316,5 +339,4 @@ button > a {
     font-size: var(--rc-typography-p);
     gap: 1rem;
   }
-
 }
