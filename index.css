@@ -254,7 +254,7 @@ button > a {
 
 /* --------------------------------------------------- */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px)  {
   /* nav */
   * {
     margin: 0;
@@ -340,3 +340,4 @@ button > a {
     gap: 1rem;
   }
 }
+
